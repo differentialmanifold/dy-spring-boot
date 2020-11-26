@@ -1,0 +1,6 @@
+dy:
+  core:
+    enable: true
+    members:
+      - mmnt
+      - uvdw
