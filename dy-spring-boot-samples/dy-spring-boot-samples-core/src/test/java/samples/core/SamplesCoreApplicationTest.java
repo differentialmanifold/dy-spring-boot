@@ -16,6 +16,7 @@ class SamplesCoreApplicationTest {
 
     @Test
     void testCoreApplication() {
+        System.out.println("start");
         System.out.println(dyCoreProperties.getEnv());
     }
 }
