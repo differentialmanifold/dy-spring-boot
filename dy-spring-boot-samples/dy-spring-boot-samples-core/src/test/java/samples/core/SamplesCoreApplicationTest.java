@@ -19,6 +19,6 @@ class SamplesCoreApplicationTest {
     void testCoreApplication() {
         System.out.println("start");
         System.out.println(dyCoreProperties.getEnv());
-        Assertions.assertEquals("dev", dyCoreProperties.getEnv() );
+        Assertions.assertEquals("staging", dyCoreProperties.getEnv() );
     }
 }
