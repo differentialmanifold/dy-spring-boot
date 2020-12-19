@@ -16,18 +16,16 @@
 
     <modules>
         <module>dy-spring-boot-samples-core</module>
+        <module>dy-spring-boot-samples-demo</module>
     </modules>
 
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
+        <samples.version>1.0-SNAPSHOT</samples.version>
+        <dy.spring.boot.version>1.0-SNAPSHOT</dy.spring.boot.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>club.differentialmanifold</groupId>
-            <artifactId>dy-core-spring-boot-starter</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
