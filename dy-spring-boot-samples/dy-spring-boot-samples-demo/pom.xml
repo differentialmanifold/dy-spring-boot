@@ -9,7 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dy-spring-boot-samples-application</artifactId>
+<!--    <packaging>war</packaging>-->
+
+    <artifactId>dy-spring-boot-samples-demo</artifactId>
 
     <dependencies>
         <dependency>
@@ -18,11 +20,24 @@
             <version>${samples.version}</version>
         </dependency>
 
+        <!--mybatis-->
+        <dependency>
+            <groupId>club.differentialmanifold</groupId>
+            <artifactId>dy-spring-boot-samples-mybatis</artifactId>
+            <version>${samples.version}</version>
+        </dependency>
+
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>
