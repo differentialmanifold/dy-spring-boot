@@ -16,8 +16,8 @@
 
     <modules>
         <module>dy-spring-boot-samples-core</module>
-        <module>dy-spring-boot-samples-demo</module>
         <module>dy-spring-boot-samples-mybatis</module>
+        <module>dy-spring-boot-samples-demo</module>
     </modules>
 
     <properties>
@@ -46,14 +46,5 @@
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
     </repositories>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
