@@ -11,22 +11,22 @@ import samples.SamplesDemoApplication;
 
 @SpringBootTest(classes = SamplesDemoApplication.class)
 public class HelloControllerOkhttpTest {
-//    @Autowired
-//    DyCoreOkhttpUtils dyCoreOkhttpUtils;
-//
-//    @Autowired
-//    DyCoreUtilsHttpProperties dyCoreUtilsHttpProperties;
-//
-//    @Test
-//    void testCoreApplication() {
-//        System.out.println("start core");
-//        System.out.println(dyCoreUtilsHttpProperties.getBasicUrl());
-//        Assertions.assertEquals("http://localhost:8081", dyCoreUtilsHttpProperties.getBasicUrl() );
-//    }
-//
-//    @Test
-//    void testHello() throws Exception {
-//        String getResult = dyCoreOkhttpUtils.get("/api/hello");
-//        System.out.println(getResult);
-//    }
+    @Autowired
+    DyCoreOkhttpUtils dyCoreOkhttpUtils;
+
+    @Autowired
+    DyCoreUtilsHttpProperties dyCoreUtilsHttpProperties;
+
+    @Test
+    void testCoreApplication() {
+        System.out.println("start core");
+        System.out.println(dyCoreUtilsHttpProperties.getBasicUrl());
+        Assertions.assertEquals("http://localhost:8081", dyCoreUtilsHttpProperties.getBasicUrl() );
+    }
+
+    @Test
+    void testHello() throws Exception {
+        String getResult = dyCoreOkhttpUtils.get("/api/hello");
+        System.out.println(getResult);
+    }
 }

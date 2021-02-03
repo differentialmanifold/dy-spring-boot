@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.TimeUnit;
 
-//@ConditionalOnProperty(prefix = "dy.core.utils.http", name = "enabled")
+@ConditionalOnProperty(prefix = "dy.core.utils.http", name = "enabled")
 @Configuration
 @EnableConfigurationProperties(DyCoreUtilsHttpProperties.class)
 public class DyCoreUtilsHttpAutoConfiguration {
