@@ -18,6 +18,7 @@
         <module>dy-spring-boot-samples-core</module>
         <module>dy-spring-boot-samples-mybatis</module>
         <module>dy-spring-boot-samples-demo</module>
+        <module>dy-spring-boot-samples-demo-war</module>
     </modules>
 
     <properties>
