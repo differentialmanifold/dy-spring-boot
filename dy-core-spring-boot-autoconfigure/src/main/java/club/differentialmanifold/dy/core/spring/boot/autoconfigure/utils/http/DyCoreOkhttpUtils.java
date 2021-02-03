@@ -24,13 +24,7 @@ public class DyCoreOkhttpUtils {
         return okHttpClient;
     }
 
-    /**
-     * get
-     *
-     * @param url     请求的url
-     * @param queries 请求的参数，在浏览器？后面的数据，没有可以传null
-     * @return
-     */
+
     public String get(String url, Map<String, String> queries, Map<String, String> headers) {
         String responseBody = "";
         StringBuilder sb = new StringBuilder(getRequestUrl(url));
@@ -66,7 +60,7 @@ public class DyCoreOkhttpUtils {
                 return response.body().string();
             }
         } catch (Exception e) {
-            logger.error("okhttp3 put error >> ex = {0}", e);
+            logger.error("okhttp3 put error >> ex = {}", e);
         }
         return responseBody;
     }
@@ -79,20 +73,11 @@ public class DyCoreOkhttpUtils {
         return get(url, queries, null);
     }
 
-    /**
-     * Post请求发送JSON数据....{"name":"zhangsan","pwd":"123456"} 参数一：请求Url 参数二：请求的JSON
-     * 参数三：请求回调
-     */
-    public String post(String url, String jsonParams, Map<String, String> headers) {
+
+    public String postJson(String url, String jsonParams, Map<String, String> headers) {
         String responseBody = "";
 
         Request.Builder requestBuilder = new Request.Builder();
-
-        if (StringUtils.hasLength(jsonParams)) {
-            RequestBody requestBody = RequestBody.create(jsonParams, MediaType.parse("application/json; charset=utf-8"));
-            requestBuilder = requestBuilder
-                    .post(requestBody);
-        }
 
         if (!CollectionUtils.isEmpty(headers)) {
             for (Map.Entry<String, String> entry : headers.entrySet()) {
@@ -100,8 +85,10 @@ public class DyCoreOkhttpUtils {
             }
         }
 
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), jsonParams);
         Request request = requestBuilder
                 .url(getRequestUrl(url))
+                .post(requestBody)
                 .build();
         try (Response response = okHttpClient.newCall(request).execute()) {
             //            int status = response.code();
@@ -114,12 +101,45 @@ public class DyCoreOkhttpUtils {
         return responseBody;
     }
 
-    public String post(String url) {
-        return post(url, null, null);
+    public String postJson(String url, String jsonParams) {
+        return postJson(url, jsonParams, null);
     }
 
-    public String post(String url, String jsonParams) {
-        return post(url, jsonParams, null);
+    public String postForm(String url, Map<String, String> params, Map<String, String> headers) {
+        String responseBody = "";
+
+        Request.Builder requestBuilder = new Request.Builder();
+
+        if (!CollectionUtils.isEmpty(headers)) {
+            for (Map.Entry<String, String> entry : headers.entrySet()) {
+                requestBuilder = requestBuilder.addHeader(entry.getKey(), entry.getValue());
+            }
+        }
+
+        FormBody.Builder formBodyBuilder = new FormBody.Builder();
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+            formBodyBuilder = formBodyBuilder.add(entry.getKey(), entry.getValue());
+        }
+
+        RequestBody formBody = formBodyBuilder.build();
+
+        Request request = requestBuilder
+                .url(getRequestUrl(url))
+                .post(formBody)
+                .build();
+        try (Response response = okHttpClient.newCall(request).execute()) {
+            //            int status = response.code();
+            if (response.isSuccessful()) {
+                return Objects.requireNonNull(response.body()).string();
+            }
+        } catch (Exception e) {
+            logger.error("okhttp3 post error >> ex = {0}", e);
+        }
+        return responseBody;
+    }
+
+    public String postForm(String url, Map<String, String> params) {
+        return postForm(url, params, null);
     }
 
     private String getRequestUrl(String url) {
