@@ -1,11 +1,6 @@
 dy:
   core:
     env: staging
-    utils:
-      http:
-        enabled: true
-        basic-url: http://localhost:8081
-        timeout: 30
     custom:
       custom1: this is custom1
       custom2: this is custom2

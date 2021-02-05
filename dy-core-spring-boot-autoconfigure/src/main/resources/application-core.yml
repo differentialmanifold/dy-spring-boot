@@ -1,8 +1,3 @@
 dy:
   core:
     env: staging
-    utils:
-      http:
-        enabled: true
-        basic-url: http://www.example.com
-        timeout: 30
