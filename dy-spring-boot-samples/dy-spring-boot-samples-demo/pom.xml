@@ -25,6 +25,13 @@
             <version>${samples.version}</version>
         </dependency>
 
+        <!--quartz-->
+        <dependency>
+            <groupId>club.differentialmanifold</groupId>
+            <artifactId>dy-spring-boot-samples-quartz</artifactId>
+            <version>${samples.version}</version>
+        </dependency>
+
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

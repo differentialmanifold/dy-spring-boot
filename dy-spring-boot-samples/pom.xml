@@ -19,6 +19,7 @@
         <module>dy-spring-boot-samples-mybatis</module>
         <module>dy-spring-boot-samples-demo</module>
         <module>dy-spring-boot-samples-demo-war</module>
+        <module>dy-spring-boot-samples-quartz</module>
     </modules>
 
     <properties>

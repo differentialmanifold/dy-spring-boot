@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import tk.mybatis.spring.annotation.MapperScan;
 
-@SpringBootApplication(scanBasePackages = {"samples.core", "samples.mybatis", "samples.demo"})
+@SpringBootApplication(scanBasePackages = {"samples.core", "samples.mybatis", "samples.quartz", "samples.demo"})
 @MapperScan(basePackages = "samples.mybatis.mapper")
 public class SamplesDemoApplication {
   public static void main(String[] args) {
