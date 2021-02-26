@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import samples.quartz.entity.QuartzTaskVO;
 import samples.quartz.jobs.SayHelloJob;
@@ -19,7 +20,7 @@ public class QuartzController {
     @Autowired
     private QuartzJobService quartzJobService;
 
-    @RequestMapping("/create")
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String quartzStart() throws SchedulerException {
         String cron = "0/5 * * * * ?";
         JobKey jobKey = JobKey.jobKey("job1", "group1");
