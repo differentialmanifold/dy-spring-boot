@@ -17,9 +17,9 @@ public class HelloController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     @ApiOperation(value = "测试hello world", notes = "note: hello world")
-    public ResponseResult<String> hello() {
+    public String hello() {
         logger.info("hello world");
-        return ResponseResult.success("Hello World");
+        return "Hello World";
     }
 
     @RequestMapping(value = "/hello", method = RequestMethod.POST)
