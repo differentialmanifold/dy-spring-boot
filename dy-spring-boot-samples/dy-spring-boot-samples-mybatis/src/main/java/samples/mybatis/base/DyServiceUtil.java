@@ -1,8 +1,8 @@
-package club.differentialmanifold.dy.core.spring.boot.autoconfigure.service;
+package samples.mybatis.base;
 
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.ListRequest;
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.search.OneCondition;
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.sort.SortRequest;
+import samples.mybatis.base.crud.list.ListRequest;
+import samples.mybatis.base.crud.list.search.OneCondition;
+import samples.mybatis.base.crud.list.sort.SortRequest;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Maps;

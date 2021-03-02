@@ -1,7 +1,7 @@
 package samples.demo.web;
 
 import club.differentialmanifold.dy.core.spring.boot.autoconfigure.exception.ResponseResult;
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.DyController;
+import samples.mybatis.base.DyController;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -1,4 +1,4 @@
-package club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.search;
+package samples.mybatis.base.crud.list.search;
 
 public enum SearchOperator {
 

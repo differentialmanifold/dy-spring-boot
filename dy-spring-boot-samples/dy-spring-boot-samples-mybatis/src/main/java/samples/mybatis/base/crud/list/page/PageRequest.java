@@ -1,4 +1,4 @@
-package club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.page;
+package samples.mybatis.base.crud.list.page;
 
 import lombok.Data;
 

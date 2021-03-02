@@ -1,6 +1,6 @@
 package samples.mybatis.service;
 
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.DyService;
+import samples.mybatis.base.DyService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;

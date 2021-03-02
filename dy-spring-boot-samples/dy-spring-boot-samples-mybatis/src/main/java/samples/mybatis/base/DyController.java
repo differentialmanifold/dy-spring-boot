@@ -1,8 +1,7 @@
-package club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud;
+package samples.mybatis.base;
 
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.DyServiceUtil;
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.ListRequest;
-import club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.page.PageRequest;
+import samples.mybatis.base.crud.list.ListRequest;
+import samples.mybatis.base.crud.list.page.PageRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

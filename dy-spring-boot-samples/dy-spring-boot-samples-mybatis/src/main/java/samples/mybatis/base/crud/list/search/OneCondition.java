@@ -1,4 +1,4 @@
-package club.differentialmanifold.dy.core.spring.boot.autoconfigure.service.crud.list.search;
+package samples.mybatis.base.crud.list.search;
 
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
