@@ -1,9 +1,9 @@
 package samples.mybatis.service;
 
-import samples.mybatis.base.DyService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
+import samples.mybatis.base.DyService;
 import samples.mybatis.mapper.CountryMapper;
 import samples.mybatis.model.Country;
 import tk.mybatis.mapper.entity.Example;
@@ -24,24 +24,24 @@ public class CountryService extends DyService<CountryMapper, Country> {
         }
 
         PageHelper.startPage(pageNum, pageSize);
-        List<Country> countryList = mapper.selectByExample(example);
+        List<Country> countryList = selectByExample(example);
         PageInfo<Country> pageInfo = new PageInfo<>(countryList);
         return pageInfo;
     }
 
     public Country getById(Integer id) {
-        return mapper.selectByPrimaryKey(id);
+        return selectByPrimaryKey(id);
     }
 
     public void deleteById(Integer id) {
-        mapper.deleteByPrimaryKey(id);
+        deleteByPrimaryKey(id);
     }
 
     public void save(Country country) {
         if (country.getId() != null) {
-            mapper.updateByPrimaryKey(country);
+            updateByPrimaryKey(country);
         } else {
-            mapper.insert(country);
+            insert(country);
         }
     }
 }
