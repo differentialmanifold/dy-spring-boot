@@ -32,6 +32,6 @@ public class MybatisController extends DyController {
     )
     @RequestMapping(value = "/country/dynamiclist", method = RequestMethod.GET)
     public ResponseResult<PageInfo<Country>> countryDynamicList() {
-        return ResponseResult.success(countryService.list(getListRequest()));
+        return ResponseResult.success(countryService.dynamicList(getListRequest()));
     }
 }
