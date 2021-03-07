@@ -1,9 +1,10 @@
 package samples.mybatis.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
 @Table(name = "user_info")
-public class UserInfo {
+public class UserInfo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -44,6 +45,8 @@ public class UserInfo {
      * 联系电话
      */
     private String tel;
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * @return id

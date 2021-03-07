@@ -1,8 +1,9 @@
 package samples.mybatis.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
-public class Country {
+public class Country implements Serializable {
     /**
      * 主键
      */
@@ -19,6 +20,8 @@ public class Country {
      * 代码
      */
     private String countrycode;
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * 获取主键

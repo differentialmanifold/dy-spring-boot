@@ -14,6 +14,8 @@
             <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
         </plugin>
 
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
         <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
                         connectionURL="${spring.datasource.url}"
                         userId="${spring.datasource.username}"

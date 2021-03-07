@@ -1,8 +1,9 @@
 package samples.mybatis.model;
 
+import java.io.Serializable;
 import javax.persistence.*;
 
-public class City {
+public class City implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -10,6 +11,8 @@ public class City {
     private String name;
 
     private String state;
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * @return id
