@@ -28,6 +28,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public ResponseResult<Void> exceptionHandler( Exception e) {
         logger.error("exceptionHandler", e);
-        return ResponseResult.enumError(CommonCode.INTERNAL_SERVER_ERROR);
+        CodeException codeException = new CodeException(-1, e.getLocalizedMessage());
+        return ResponseResult.customError(codeException);
     }
 }
