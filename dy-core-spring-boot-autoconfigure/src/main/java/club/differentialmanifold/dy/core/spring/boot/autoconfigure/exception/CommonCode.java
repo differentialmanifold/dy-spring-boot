@@ -17,7 +17,8 @@ public enum CommonCode implements ErrorCode {
     METHOD_NOT_SUPPORTED(1005, "method not supported"), // http方法不支持
     INTERNAL_SERVER_ERROR(1006, "internal server error"), // 系统内部异常
     INVALID_ACCESSTOKEN(1007,"Invalid AccessToken"), // TOKEN无效
-    INVALID_SIGNATURE(1008,"Invalid Signature"); // 签名无效
+    INVALID_SIGNATURE(1008,"Invalid Signature"), // 签名无效
+	UNIQUE_KEY_CONFLICTS(1009, "unique key conflicts"); //唯一键冲突
 	
 	private final Integer errcode;
 	private final String errmsg;
