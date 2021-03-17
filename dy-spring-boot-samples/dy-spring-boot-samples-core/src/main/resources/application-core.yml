@@ -4,6 +4,8 @@ dy:
     custom:
       custom1: this is custom1
       custom2: this is custom2
+    cors:
+      enabled: true
     swagger:
       enabled: true
       versions:
