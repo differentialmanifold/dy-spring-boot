@@ -39,7 +39,7 @@ public class JwtTokenUtil implements Serializable {
         return username;
     }
 
-    protected Date getCreatedDateFromToken(String token) {
+    public Date getCreatedDateFromToken(String token) {
         Date created;
         try {
             final Claims claims = getClaimsFromToken(token);
@@ -51,7 +51,7 @@ public class JwtTokenUtil implements Serializable {
         return created;
     }
 
-    protected Date getExpirationDateFromToken(String token) {
+    public Date getExpirationDateFromToken(String token) {
         Date expiration;
         try {
             final Claims claims = getClaimsFromToken(token);
@@ -63,7 +63,7 @@ public class JwtTokenUtil implements Serializable {
         return expiration;
     }
 
-    protected Claims getClaimsFromToken(String token) {
+    public Claims getClaimsFromToken(String token) {
         Claims claims;
         try {
             claims = Jwts.parser()
@@ -77,16 +77,16 @@ public class JwtTokenUtil implements Serializable {
         return claims;
     }
 
-    protected Date generateExpirationDate() {
+    public Date generateExpirationDate() {
         return new Date(System.currentTimeMillis() + properties.getJwt().getExpiration() * 1000);
     }
 
-    protected Boolean isTokenExpired(String token) {
+    public Boolean isTokenExpired(String token) {
         final Date expiration = getExpirationDateFromToken(token);
         return expiration.before(new Date());
     }
 
-    protected Boolean isCreatedBeforeLastPasswordReset(Date created, Date lastPasswordReset) {
+    public Boolean isCreatedBeforeLastPasswordReset(Date created, Date lastPasswordReset) {
         return (lastPasswordReset != null && created.before(lastPasswordReset));
     }
 
@@ -97,7 +97,7 @@ public class JwtTokenUtil implements Serializable {
         return generateToken(claims);
     }
 
-    protected String generateToken(Map<String, Object> claims) {
+    public String generateToken(Map<String, Object> claims) {
         return Jwts.builder()
                 .setClaims(claims)
                 .setExpiration(generateExpirationDate())
