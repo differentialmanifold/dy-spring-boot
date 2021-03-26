@@ -33,3 +33,17 @@ dy:
 #          contact-name: ""
 #          contact-url: ""
 #          contact-email: ""
+
+  security:
+    enabled: true
+    jwt:
+      expiration: 2500000
+      header: Authorization
+      secret: 1100.game.dev
+      token-head: Bearer
+    cors-permit:
+      patterns: /**
+    resource-permit:
+      patterns: /, /*.html, /favicon.ico, /**/*.html, /**/*.css, /**/*.js, /webjars/**, /swagger-resources/**, /*/api-docs
+    auth-permit:
+      patterns: /api/hello
