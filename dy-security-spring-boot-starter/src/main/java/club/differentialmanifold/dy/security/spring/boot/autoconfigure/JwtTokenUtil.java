@@ -26,6 +26,11 @@ public class JwtTokenUtil implements Serializable {
         this.properties = properties;
     }
 
+    public String getUsername(String headToken) {
+        headToken = headToken.substring(this.properties.getJwt().getTokenHead().length()).trim();
+        return getUsernameFromToken(headToken);
+    }
+
     public String getUsernameFromToken(String token) {
         String username;
         try {
