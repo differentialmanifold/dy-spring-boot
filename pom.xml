@@ -13,7 +13,6 @@
         <module>dy-core-spring-boot-starter</module>
         <module>dy-core-spring-boot-autoconfigure</module>
         <module>dy-security-spring-boot-starter</module>
-        <module>dy-spring-boot-samples</module>
     </modules>
 
 
