@@ -1,22 +1,16 @@
 package club.differentialmanifold.dy.core.spring.boot.autoconfigure.utils.http;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLSession;
-
 import club.differentialmanifold.dy.core.spring.boot.autoconfigure.utils.http.builder.DyOkGetBuilder;
 import club.differentialmanifold.dy.core.spring.boot.autoconfigure.utils.http.builder.DyOkPostBuilder;
-import okhttp3.Cache;
-import okhttp3.Call;
-import okhttp3.Dispatcher;
+
 import okhttp3.OkHttpClient;
 
 public class DyOkhttpUtils {
 
-    private static DyOkhttpUtils dyOkhttpUtils;
+    private volatile static DyOkhttpUtils dyOkhttpUtils;
     private OkHttpClient okHttpClient;
 
     //防止网络重复请求的tagList;

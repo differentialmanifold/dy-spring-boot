@@ -1,5 +1,6 @@
 package club.differentialmanifold.dy.core.spring.boot.autoconfigure;
 
+import club.differentialmanifold.dy.core.spring.boot.autoconfigure.cache.CacheConfig;
 import club.differentialmanifold.dy.core.spring.boot.autoconfigure.cors.CorsConfig;
 import club.differentialmanifold.dy.core.spring.boot.autoconfigure.exception.GlobalExceptionHandler;
 import club.differentialmanifold.dy.core.spring.boot.autoconfigure.swagger.SwaggerConfig;
@@ -14,7 +15,8 @@ import org.springframework.context.annotation.Import;
 @Import({
         SwaggerConfig.class,
         CorsConfig.class,
-        GlobalExceptionHandler.class
+        GlobalExceptionHandler.class,
+        CacheConfig.class
 })
 public class DyCoreAutoConfiguration{
 
