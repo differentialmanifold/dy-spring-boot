@@ -102,7 +102,7 @@ public class ResponseResult<T> implements Serializable {
     public static <T> ResponseResult<T> error(String message) {
         ResponseResult<T> rb = new ResponseResult<T>();
         rb.setCode(CommonCode.FAIL.getErrcode());
-        rb.setMsg(CommonCode.FAIL.getErrmsg());
+        rb.setMsg(message);
         rb.setData(null);
         return rb;
     }

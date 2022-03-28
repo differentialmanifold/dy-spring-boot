@@ -26,6 +26,6 @@ public class DyCoreAutoConfiguration{
 
     public DyCoreAutoConfiguration(DyCoreProperties properties) {
         this.properties = properties;
-        logger.info("dy core init success ..");
+        logger.info("dy core init success ...");
     }
 }
