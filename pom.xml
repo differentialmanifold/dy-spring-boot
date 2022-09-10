@@ -68,12 +68,12 @@
         <repository>
             <id>dy-release</id>
             <name>dy Release</name>
-            <url>https://nexus3.differentialmanifold.club/repository/maven-releases/</url>
+            <url>http://47.92.175.196:16200/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>dy-snapshot</id>
             <name>dy Snapshot</name>
-            <url>https://nexus3.differentialmanifold.club/repository/maven-snapshots/</url>
+            <url>http://47.92.175.196:16200/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
