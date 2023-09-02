@@ -10,14 +10,9 @@ To create a new spring boot project, you can directly use `dy-spring-boot-sample
 
     <repositories>
         <repository>
-            <id>dy-public</id>
-            <name>dy public</name>
-            <url>https://nexus3.differentialmanifold.club/repository/maven-public/</url>
-        </repository>
-        <repository>
-            <id>alimaven</id>
-            <name>aliyun maven</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <id>github-dy-spring-boot</id>
+            <name>dy spring boot</name>
+            <url>https://maven.pkg.github.com/differentialmanifold/dy-spring-boot</url>
         </repository>
     </repositories>
 

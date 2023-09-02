@@ -66,16 +66,10 @@
 
     <distributionManagement>
         <repository>
-            <id>dy-release</id>
-            <name>dy Release</name>
-            <url>http://47.92.175.196:16200/repository/maven-releases/</url>
+            <id>github-dy-spring-boot</id>
+            <name>GitHub dy-spring-boot Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/differentialmanifold/dy-spring-boot</url>
         </repository>
-        <snapshotRepository>
-            <id>dy-snapshot</id>
-            <name>dy Snapshot</name>
-            <url>http://47.92.175.196:16200/repository/maven-snapshots/</url>
-        </snapshotRepository>
     </distributionManagement>
-
 
 </project>
